@@ -1,0 +1,21 @@
+configlap:
+EPAAS_ENV:
+el
+deployment:
+containerPort:
+8880
+11fecycle: t}
+livenessProbe: null readinessProbe:
+hetphet:
+path: /
+port: 8080
+scheme: HTTP
+initialDelaySeconds: 30
+timeoutSeconds: 15
+resourcesLimitsCPU: '1' resourcesLimitsMemory: 46
+resourcesRequestsCPU: 250m
+resourcesRequestsMemory: 1.56
+sideContainer: null hpa:
+cpuUtilizationPercentage: 75
+enabled: true maxReplicas: 3
+minReplicas: 1

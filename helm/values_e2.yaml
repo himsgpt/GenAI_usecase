@@ -1,0 +1,16 @@
+configMap:
+EPAAS_ENV: e2
+deployment:
+containerPort: 8080
+lifecycle: (} livenessProbe: null
+readinessProbe: httphet:
+pach: /health
+port: 8080
+scheme: HTTP
+initialDelaySeconds: timeoutSeconds: 15
+resourcesLimitsCPU: 1 resourcesLimitsMemory: 46 resourcesRequestsCPU: 250m
+resourcesRequestsMemory: 1.56
+sideContainer: null npa:
+cputilizationPercentage: 75
+enabled: true maxReplicas: 5
+minReplicas: 2

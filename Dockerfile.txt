@@ -1,0 +1,42 @@
+ARG PAAS_BUILD_ ID
+FROM artifactory-aexp.com/dockexproxy/Python:9(FYPI
+_VERSIONI-bullseye
+COPY ‹/data/cache/nitk data /ust/local/share/nitk data/ COPY certs/*.crt /usr/Iocal/share/ca-certificatesT
+RiN update-Ca-certificates
+RUN \
+* prepare apt sources to use proxy
+sed -i 'sthttp://deb.debian.org/debian=security@https=//artifactory-ae
+# install ca-certificates if not present
+1t [1-d /etc/ssl ] : then echo "Acquire::https::Verify-Peer "false";
+apt update && apt instally curl && apt clean
+RUN
+apt-get update as \ apt-get clean && \
+apt-get install git curl gnutls-bin -y && \
+rm -rf /var/lib/apt/lists/*
+RUN \
+echo '[global]'> /etc/pip.conf &5
+echo 'index - https://artifactory.aexp.com/python-proxy=internal/pypi: ›› echo 'index-url - https://artifactory.aexp.com/api/pypi/python-proxy=intei echo 'extra-index-url -https://artifactory.aexp.com/api/pypi/python=CoXP
+$ Set some environment variables for applications.
+ENV PAAS _BUILD_ID-S(PAAS_BUILD IDIN
+HOME -/home/paasuser A
+HOME_BIN-/home/paasuser/binA
+TZ- GMT
+WORKDIR SHOME
+COPY GenSQL app-py -
+COPY config-py •
+COPY prompt
+_template.py
+COPY requirements.txt・
+COPY -/data -/data/
+RUN
+useradd 1 1001 1-90 nd S|HOME
+chmod FRf g+nwX /home/paasusex &oN
+chmod +x /home/paasuser/GenSQL_aPP-PH
+-s /sbin/nologin -c "Detault Applicata
+RUN A
+DiP3inatalln-upgrade pip &aN
+pip3 install --upgrade setuptools as pip3 install -= reguirements.txe
+USER 1001
+EXPOSE 8080
+ENTRYPOINT ["streamlit", "run""/home/paasuser/GenSOL_app-py
+Footeramnerican
